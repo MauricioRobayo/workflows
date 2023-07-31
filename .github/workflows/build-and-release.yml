@@ -1,6 +1,9 @@
 name: Build and release
 on:
   workflow_call:
+    secrets:
+      NPM_TOKEN:
+        required: true
 jobs:
   build-and-test:
     name: Build, lint, and test
