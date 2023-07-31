@@ -15,7 +15,7 @@ You can define inputs and secrets, which can be passed from the caller workflow 
 
 In the reusable workflow, use the inputs and secrets keywords to define inputs or secrets that will be passed from a caller workflow.
 
-```yml
+```yml®
 on:
   workflow_call:
     inputs:
