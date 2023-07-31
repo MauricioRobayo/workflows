@@ -14,6 +14,8 @@ jobs:
         with:
           node-version: 18
           cache: "npm"
+      - name: Install Dependencies
+        run: npm ci
       - name: Build
         run: npm run build
       - name: Upload build
@@ -22,8 +24,6 @@ jobs:
         with:
           name: dist
           path: dist
-      - name: Install Dependencies
-        run: npm ci
       - name: Lint
         if: github.ref != 'refs/heads/main'
         run: npm run lint
